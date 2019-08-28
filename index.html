@@ -3,18 +3,133 @@
   <head>
     <meta charset="utf-8">
     <title>Curso jquery</title>
+    <style>
+      .ocultar{
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <h1 class="saludos">Hola Código Facilito</h1>
-    <p id="parrafo">Saludos a todos</p>
+    <p id="parrafo" class=" ">Saludos a todos</p>
     <div>:3 :)</div>
+    <img id="coco" src="imagen.jpg" alt="">
+<<br>
+    <button id="btn1">Mostras </button>
+    <button id="btn2">Ocultar </button>
+
     <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+
     <script>
-      $(document).ready(function(){
-        $('#parrafo').text('holi');
-        $('.saludos').css({'background-color': 'red'});
-        $('div').text("Hola mundo");
-      });
+      // $(document).ready(function(){
+      //   $('#parrafo').text('holi');
+      //   $('.saludos').css({'background-color': 'red'});
+      //   $('div').text("Hola mundo");
+      // });
+      // $.when( $.ready, $.getScript("js/index.js") ).then(function() {
+      //    console.log("pasó");
+      // }).catch( function() {
+      //    console.log("no pasó");
+      // });
+
+            //getters y setters
+
+      //   $(function(){
+      //    var s = $('h1').attr('id','hola');
+      // alert(s);
+      //   })
+     //metodos css
+     // $(function(){
+     //  $('.saludos').css({'background-color':'red', 'text-align':'center'});
+     // });
+
+     // //Calses css hasClass addClass removeClass
+     // $(function(){
+     //  $('#parrafo').css({'background-color':'red', 'text-align':'center'});
+     //  if ($('#parrafo').hasClass('saludos')) {
+     //    alert('Si tiene la clase saludos');
+     //    $('#parrafo').removeClass('saludos');
+     //  }
+     //  else{
+     //    alert('no tienela clase saludos');
+     //    $('div').addClass('hola');
+     //  }
+     // });
+
+     //Show and Hide
+    // $(function(){
+    //   $('.saludos').css({'background-color':'red', 'text-align':'center'});
+    //   if ($('#parrafo').hasClass('saludos')) {
+    //     alert('Si tiene la clase saludos');
+    //     $('#parrafo').show(3000);
+    //   }
+    //   else{
+    //     alert('no tienela clase saludos');
+    //     $('div').hide(3000);
+    //   }
+    //  });
+
+
+    //interar elementos each y for
+      // var numbers=[1,2,3,4,5,6,67,3,4,5];
+      // $.each(numbers,function(i,value){
+      //   console.log(i+":"+value);
+      // });
+      // console.log("Tamaño del arreglo: "+numbers.length);
+      // for (var i = 0;i<numbers.length;i++) {
+      //   console.log(numbers[i]);
+      // }
+    // });
+    // $(function(){
+
+    //interar elementos con for of
+  //   var colors = [{
+  //     "colors":[{
+  //       "colorName":"red",
+  //       "hexValue":"#f00"
+  //     },
+  //     {
+  //       "colorName":"green",
+  //       "hexValue":"#0f0"
+  //     },
+  //     {
+  //       "colorName":"blue",
+  //       "hexValue":"#00f"      
+  //     }]
+  //   }];
+  //   for (let color of colors) {
+  //     console.log(color);
+  //   }
+  // }
+  
+    //Metodo Attr
+    // $(function(){
+    //   $('#coco').click(function(){
+    //     $('#coco').removeAttr('src');
+    //   });
+    // });
+
+
+    //dimensiones
+      // 
+      // $('#coco').click(function(){
+      //   var h = $('#coco').height();
+      //   alert(h);
+      //   var n = $('#coco').height(400);
+      //   alert(n);
+      // });
+
+      //efectos
+      $(function(){
+        $('#btn1').click(function(){
+          $('#coco').slideDown(3000);
+        });
+        $('#btn2').click(function(){
+          $('coco').slideUp(5000);
+        });
+    });
+
     </script>
   </body>
 </html>
