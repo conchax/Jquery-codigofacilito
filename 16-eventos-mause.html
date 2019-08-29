@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>eventos mause</title>
+  
+  </head>
+  <body>
+  	<center>
+  		<h1><i class="fa fa-volume-up" id="icon"></i></h1>
+  	</center>
+	
+    
+ 	<script src="js/jquery.min.js"></script>
+ 	<script src="https://use.fontawesome.com/e622d3b53e.js"></script>
+    <script src="js/index.js"></script>
+    <script>     
+    //Eventos mause
+    $(function(){
+		$('#icon').mouseover(function(){
+			$('#icon').addClass('fa-volume-off').removeClass('fa-volume-up');
+		});
+		$('#icon').mouseleave(function(){
+			$('#icon').addClass('fa-volume-up').removeClass('fa-volume-off');
+		});
+    });
+    </script>
+  </body>
+</html>
